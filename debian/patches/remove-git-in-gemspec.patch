@@ -1,0 +1,19 @@
+Debian build environment is not a git repo (we use tarballs)
+
+--- a/googleauth.gemspec
++++ b/googleauth.gemspec
+@@ -18,11 +18,9 @@
+    https://developers.google.com/accounts/docs/application-default-credentials
+   DESCRIPTION
+ 
+-  gem.files         = `git ls-files`.split "\n"
+-  gem.test_files    = `git ls-files -- spec/*`.split "\n"
+-  gem.executables   = `git ls-files -- bin/*.rb`.split("\n").map do |f|
+-    File.basename f
+-  end
++  gem.files         = Dir.glob("**/*").select {|v| v !~ /^debian/}
++  gem.test_files    = gem.files.select {|v| v =~ /^(test|spec|features)/}
++  gem.executables   = gem.files.select {|v| v =~ /^bin\//}.map { |f| File.basename(f) }
+   gem.require_paths = ["lib"]
+   gem.platform      = Gem::Platform::RUBY
+   gem.required_ruby_version = ">= 2.4.0"

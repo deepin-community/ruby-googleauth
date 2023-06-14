@@ -1,5 +1,64 @@
-template-repository (1.0-1) unstable; urgency=medium
+ruby-googleauth (0.13.0-3) unstable; urgency=medium
 
-  * Initial release
+  * Add Breaks: ruby-google-api-client (<< 0.33~)
+    (This will allow testing migration of ruby-google-api-client)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Pirate Praveen <praveen@debian.org>  Fri, 21 Aug 2020 23:24:45 +0530
+
+ruby-googleauth (0.13.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 29 Jun 2020 17:26:07 +0530
+
+ruby-googleauth (0.13.0-1) experimental; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Pirate Praveen ]
+  * New upstream version 0.13.0
+  * Add patch to remove git usage in gemspec
+  * Bump minimum version of ruby-faraday to 0.17.3
+  * Bump minimum version of ruby-signet to 0.14
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 23 Jun 2020 15:52:30 +0530
+
+ruby-googleauth (0.8.0-2) unstable; urgency=medium
+
+  * Tighten dependency on ruby-faraday and ruby-memoist
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 17 Mar 2019 15:39:34 +0530
+
+ruby-googleauth (0.8.0-1) unstable; urgency=medium
+
+  * New upstream version 0.8.0
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Use salsa.debian.org in Vcs-* fields
+  * Move debian/watch to gemwatch.debian.net
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 05 Mar 2019 21:27:23 +0530
+
+ruby-googleauth (0.5.1-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Update build dependencies
+  * Bump standards version to 4.0.0 (no changes)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 07 Jul 2017 20:56:15 +0530
+
+ruby-googleauth (0.5.1-1) experimental; urgency=medium
+
+  * Initial release (Closes: #853259)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 31 Jan 2017 02:06:19 +0530
